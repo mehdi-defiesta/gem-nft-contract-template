@@ -1,0 +1,77 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "TreasuryStorage",
+  "sourceName": "src/L2/TreasuryStorage.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "FailedToSendTON",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotEnoughTonAvailableInTreasury",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotEnoughWstonAvailableInTreasury",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TonAddressIsNotSet",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "UnsuffiscientTonBalance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "UnsuffiscientWstonBalance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WstonAddressIsNotSet",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "DECIMALS",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "TON_FEES_RATE_DIVIDER",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608080604052346020576006805460ff60a01b1916905560af908160268239f35b600080fdfe6080806040526004361015601257600080fd5b600090813560e01c90816308ec897d14605b5750632e0f262514603457600080fd5b3460585780600319360112605857604051676765c793fa10079d601b1b8152602090f35b80fd5b905034607557816003193601126075578061271060209252f35b5080fdfea2646970667358221220443bd378e7db9d3e326255f969952d4abc0f31c955048b8ad1069936432a3a1e64736f6c63430008190033",
+  "deployedBytecode": "0x6080806040526004361015601257600080fd5b600090813560e01c90816308ec897d14605b5750632e0f262514603457600080fd5b3460585780600319360112605857604051676765c793fa10079d601b1b8152602090f35b80fd5b905034607557816003193601126075578061271060209252f35b5080fdfea2646970667358221220443bd378e7db9d3e326255f969952d4abc0f31c955048b8ad1069936432a3a1e64736f6c63430008190033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

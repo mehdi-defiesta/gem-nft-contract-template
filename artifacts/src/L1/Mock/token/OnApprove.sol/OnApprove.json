@@ -1,0 +1,69 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "OnApprove",
+  "sourceName": "src/L1/Mock/token/OnApprove.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onApprove",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60808060405234601557610111908161001b8239f35b600080fdfe6080806040526004361015601257600080fd5b600090813560e01c90816301ffc9a71460a65750634273ca1614603457600080fd5b34609b576080366003190112609b576001600160a01b036004358181160360a25760243590811603609b5760643567ffffffffffffffff808211609e5736602383011215609e578160040135908111609e5736910160240111609b57602090604051908152f35b80fd5b8280fd5b5080fd5b90503460a257602036600319011260a25760043563ffffffff60e01b8116809103609e576301ffc9a760e01b14815260209150f3fea2646970667358221220a68873db1a0d08b27e7f2f6d6854d3e833883a630800281424ce27baf8d95ae864736f6c63430008190033",
+  "deployedBytecode": "0x6080806040526004361015601257600080fd5b600090813560e01c90816301ffc9a71460a65750634273ca1614603457600080fd5b34609b576080366003190112609b576001600160a01b036004358181160360a25760243590811603609b5760643567ffffffffffffffff808211609e5736602383011215609e578160040135908111609e5736910160240111609b57602090604051908152f35b80fd5b8280fd5b5080fd5b90503460a257602036600319011260a25760043563ffffffff60e01b8116809103609e576301ffc9a760e01b14815260209150f3fea2646970667358221220a68873db1a0d08b27e7f2f6d6854d3e833883a630800281424ce27baf8d95ae864736f6c63430008190033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

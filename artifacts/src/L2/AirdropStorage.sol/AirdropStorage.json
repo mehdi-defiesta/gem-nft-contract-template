@@ -1,0 +1,95 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "AirdropStorage",
+  "sourceName": "src/L2/AirdropStorage.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "AlreadyInitialized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ContractNotPaused",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ContractPaused",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NoEligibleUsers",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TokenNotAvailable",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TokenNotOwnedByTreasury",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "UserAlreadyClaimedCurrentAirdrop",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "UserNotEligible",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "EligibleTokenListCleared",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "TokensAssigned",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "TokensClaimed",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x60808060405234601357603a908160198239f35b600080fdfe600080fdfea264697066735822122004861d5b55360c4f62f09bc2b6fb71cdea8195a7486f61fd987f59073ab4e37964736f6c63430008190033",
+  "deployedBytecode": "0x600080fdfea264697066735822122004861d5b55360c4f62f09bc2b6fb71cdea8195a7486f61fd987f59073ab4e37964736f6c63430008190033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

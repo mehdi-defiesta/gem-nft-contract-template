@@ -1,0 +1,1088 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "GemFactoryStorage",
+  "sourceName": "src/L2/GemFactoryStorage.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "AddressZero",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ColorNotExist",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ContractNotPaused",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ContractPaused",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CooldownPeriodNotElapsed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FailedToSendEthBack",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "GemAlreadyPicked",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "GemIsLocked",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "GemIsNotLocked",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "quadrant",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "value",
+          "type": "uint8"
+        }
+      ],
+      "name": "InvalidQuadrant",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidSumOfQuadrants",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MiningPeriodNotElapsed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MismatchedArrayLengths",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "quadrantIndex",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "expectedValue1",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "expectedValue2",
+          "type": "uint8"
+        }
+      ],
+      "name": "NewGemInvalidQuadrant",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NoMiningTryLeft",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotGemOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotMining",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "RequestNotMade",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "SameSenderAndRecipient",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "sum",
+          "type": "uint8"
+        },
+        {
+          "internalType": "string",
+          "name": "rarity",
+          "type": "string"
+        }
+      ],
+      "name": "SumOfQuadrantsTooHigh",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TransferFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "URIQueryForNonexistentToken",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "UnauthorizedCaller",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WrongRarity",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint8",
+          "name": "id",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "backgroundColor",
+          "type": "string"
+        }
+      ],
+      "name": "BackgroundColorAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "newCallbackGasLimit",
+          "type": "uint32"
+        }
+      ],
+      "name": "CallBackGasLimitUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint8",
+          "name": "id",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "color",
+          "type": "string"
+        }
+      ],
+      "name": "ColorAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "color_0",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "color_1",
+          "type": "uint8"
+        }
+      ],
+      "name": "ColorValidated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "gemCount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "CountGemsByQuadrant",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum GemFactoryStorage.Rarity",
+          "name": "rarity",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8[2]",
+          "name": "color",
+          "type": "uint8[2]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "miningTry",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8[4]",
+          "name": "quadrants",
+          "type": "uint8[4]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "cooldownDueDate",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "tokenURI",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "Created",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "EthSentBack",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "gemOwner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "gemsTokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newGemCreatedId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum GemFactoryStorage.Rarity",
+          "name": "newRarity",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8[4]",
+          "name": "forgedQuadrants",
+          "type": "uint8[4]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8[2]",
+          "name": "color",
+          "type": "uint8[2]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "GemForged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        }
+      ],
+      "name": "GemMelted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "chosenTokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "minedGemCooldownDueDate",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "initialGemCooldownDueDate",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "miner",
+          "type": "address"
+        }
+      ],
+      "name": "GemMiningClaimed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "miner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "startMiningTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newminingTry",
+          "type": "uint256"
+        }
+      ],
+      "name": "GemMiningStarted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "RareGemsCooldownPeriod",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "UniqueGemsCooldownPeriod",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "EpicGemsCooldownPeriod",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "LegendaryGemsCooldownPeriod",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "MythicGemsCooldownPeriod",
+          "type": "uint32"
+        }
+      ],
+      "name": "GemsCoolDownPeriodModified",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "RareGemsMiningPeriod",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "UniqueGemsMiningPeriod",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "EpicGemsMiningPeriod",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "LegendaryGemsMiningPeriod",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "MythicGemsMiningPeriod",
+          "type": "uint32"
+        }
+      ],
+      "name": "GemsMiningPeriodModified",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "RareGemsMiningTry",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "UniqueGemsMiningTry",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "EpicGemsMiningTry",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "LegendaryGemsMiningTry",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "MythicGemsMiningTry",
+          "type": "uint8"
+        }
+      ],
+      "name": "GemsMiningTryModified",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "CommonGemsValue",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "RareGemsValue",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "UniqueGemsValue",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "EpicGemsValue",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "LegendaryValue",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "MythicValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "GemsValueModified",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "MiningCancelled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "initialGemCooldownDueDate",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "miner",
+          "type": "address"
+        }
+      ],
+      "name": "NoGemAvailable",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "requestNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "RandomGemRequested",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "gemCooldownDueDate",
+          "type": "uint256"
+        }
+      ],
+      "name": "TransferGEM",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "GEMIndexToOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "Gems",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "gemCooldownDueDate",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "randomRequestId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum GemFactoryStorage.Rarity",
+          "name": "rarity",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "miningTry",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bool",
+          "name": "isLocked",
+          "type": "bool"
+        },
+        {
+          "internalType": "string",
+          "name": "tokenURI",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "callbackGasLimit",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "name": "colorName",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "colors",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "colorsCount",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "enum GemFactoryStorage.Rarity",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "name": "numberMiningGemsByRarity",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "ownershipTokenCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "s_requests",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "randomWord",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "chosenTokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "requester",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "requested",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "fulfilled",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "tokenMiningByUser",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenReadyToMine",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "userMiningStartTime",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "userMiningToken",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60808060405234601557610641908161001b8239f35b600080fdfe608060409080825260048036101561001657600080fd5b600091823560e01c90816324f746971461049857508063356edf74146104765780635c975abb146104525780635f2d0023146103ed57806361f7f6d71461032e578063676f79f1146102ed5780637866369b146102bf57806397125c401461028c578063a168fa891461021e578063a1770a7d146101d7578063c13890721461019f578063cec21acb14610167578063ea094c39146101315763f317d7dd146100be57600080fd5b3461012d578260031936011261012d5735906024359160035481101561012d57600382527fc2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b0190600283101561012a575060209260f860ff928460051c015491519360031b161c168152f35b80fd5b5080fd5b50829034610163576020366003190112610163573560068110156101635782829160209452600a845220549051908152f35b8280fd5b82843461012d57602036600319011261012d5760209181906001600160a01b0361018f6105f0565b1681526005845220549051908152f35b82843461012d57602036600319011261012d5760209181906001600160a01b036101c76105f0565b1681526006845220549051908152f35b82843461012d578060031936011261012d5760209160ff9082906001600160a01b036102016105f0565b168152600785528181206024358252855220541690519015158152f35b50829034610163576020366003190112610163578160c09360ff92358152600b602052209182549260018101549160036002830154920154928151958652602086015284015260018060a01b0381166060840152818160a01c161515608084015260a81c16151560a0820152f35b5082903461016357602036600319011261016357803583526020908152918190205490516001600160a01b039091168152f35b50829034610163576020366003190112610163578160209360ff923581526009855220541690519015158152f35b82843461012d578060031936011261012d5760209181906001600160a01b036103146105f0565b168152600884528181206024358252845220549051908152f35b50913461012d57602036600319011261012d578235825481101561016357828052602083209060031b019182549060018401549360028101549160038201548783015493610382600760ff871695016104bd565b96805198610100978a5260208a0152880152606087015260068210156103da57509160ff8594926103d6946080870152818160081c1660a087015260101c16151560c08501528060e08501528301906105b0565b0390f35b634e487b7160e01b815260218752602490fd5b508290346101635781600319360112610163573560ff8116809103610163576024359060ff821680920361044e578361043b9284926103d696526001602052828220908252602052206104bd565b90519182916020835260208301906105b0565b8380fd5b82843461012d578160031936011261012d5760209060ff600c541690519015158152f35b82843461012d578160031936011261012d5760209060ff600254169051908152f35b83903461012d578160031936011261012d5760209063ffffffff600d5460801c168152f35b906040519160009080549060018260011c91600184169384156105a6575b6020948585108114610592578489529081156105745750600114610538575b50505050829003601f01601f1916820167ffffffffffffffff81118382101761052257604052565b634e487b7160e01b600052604160045260246000fd5b909293506000528260002091836000935b8385106105605750505050830101388080806104fa565b805488860183015293019284908201610549565b60ff191688860152505050151560051b8401019050388080806104fa565b634e487b7160e01b87526022600452602487fd5b92607f16926104db565b919082519283825260005b8481106105dc575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016105bb565b600435906001600160a01b038216820361060657565b600080fdfea264697066735822122009fd6a79959c274e26b7a4857ecaf0991e394031d0f27ede3b4f12f43b5ad8e764736f6c63430008190033",
+  "deployedBytecode": "0x608060409080825260048036101561001657600080fd5b600091823560e01c90816324f746971461049857508063356edf74146104765780635c975abb146104525780635f2d0023146103ed57806361f7f6d71461032e578063676f79f1146102ed5780637866369b146102bf57806397125c401461028c578063a168fa891461021e578063a1770a7d146101d7578063c13890721461019f578063cec21acb14610167578063ea094c39146101315763f317d7dd146100be57600080fd5b3461012d578260031936011261012d5735906024359160035481101561012d57600382527fc2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b0190600283101561012a575060209260f860ff928460051c015491519360031b161c168152f35b80fd5b5080fd5b50829034610163576020366003190112610163573560068110156101635782829160209452600a845220549051908152f35b8280fd5b82843461012d57602036600319011261012d5760209181906001600160a01b0361018f6105f0565b1681526005845220549051908152f35b82843461012d57602036600319011261012d5760209181906001600160a01b036101c76105f0565b1681526006845220549051908152f35b82843461012d578060031936011261012d5760209160ff9082906001600160a01b036102016105f0565b168152600785528181206024358252855220541690519015158152f35b50829034610163576020366003190112610163578160c09360ff92358152600b602052209182549260018101549160036002830154920154928151958652602086015284015260018060a01b0381166060840152818160a01c161515608084015260a81c16151560a0820152f35b5082903461016357602036600319011261016357803583526020908152918190205490516001600160a01b039091168152f35b50829034610163576020366003190112610163578160209360ff923581526009855220541690519015158152f35b82843461012d578060031936011261012d5760209181906001600160a01b036103146105f0565b168152600884528181206024358252845220549051908152f35b50913461012d57602036600319011261012d578235825481101561016357828052602083209060031b019182549060018401549360028101549160038201548783015493610382600760ff871695016104bd565b96805198610100978a5260208a0152880152606087015260068210156103da57509160ff8594926103d6946080870152818160081c1660a087015260101c16151560c08501528060e08501528301906105b0565b0390f35b634e487b7160e01b815260218752602490fd5b508290346101635781600319360112610163573560ff8116809103610163576024359060ff821680920361044e578361043b9284926103d696526001602052828220908252602052206104bd565b90519182916020835260208301906105b0565b8380fd5b82843461012d578160031936011261012d5760209060ff600c541690519015158152f35b82843461012d578160031936011261012d5760209060ff600254169051908152f35b83903461012d578160031936011261012d5760209063ffffffff600d5460801c168152f35b906040519160009080549060018260011c91600184169384156105a6575b6020948585108114610592578489529081156105745750600114610538575b50505050829003601f01601f1916820167ffffffffffffffff81118382101761052257604052565b634e487b7160e01b600052604160045260246000fd5b909293506000528260002091836000935b8385106105605750505050830101388080806104fa565b805488860183015293019284908201610549565b60ff191688860152505050151560051b8401019050388080806104fa565b634e487b7160e01b87526022600452602487fd5b92607f16926104db565b919082519283825260005b8481106105dc575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016105bb565b600435906001600160a01b038216820361060657565b600080fdfea264697066735822122009fd6a79959c274e26b7a4857ecaf0991e394031d0f27ede3b4f12f43b5ad8e764736f6c63430008190033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

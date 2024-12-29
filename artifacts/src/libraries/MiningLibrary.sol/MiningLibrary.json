@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MiningLibrary",
+  "sourceName": "src/libraries/MiningLibrary.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea2646970667358221220d67977d90bc5270409778561e27e451319891aa5df814a2162df1b63fed3eff764736f6c63430008190033",
+  "deployedBytecode": "0x600080fdfea2646970667358221220d67977d90bc5270409778561e27e451319891aa5df814a2162df1b63fed3eff764736f6c63430008190033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,137 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "WstonSwapPoolStorage",
+  "sourceName": "src/L2/WstonSwapPoolStorage.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ContractTonBalanceOrAllowanceTooLow",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "FailedToApproveTon",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FailedToTransferTON",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WrongStakingIndex",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WstonAllowanceTooLow",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WstonBalanceTooLow",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "StakingIndexUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tonAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "wstonAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "SwappedWstonForTon",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DECIMALS",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ton",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "treasury",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "wston",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523460155761011a908161001b8239f35b600080fdfe6080806040526004361015601257600080fd5b600090813560e01c9081632e0f26251460bd5750806336b17e1314609657806361d027b314606f5763cc48b94714604857600080fd5b34606c5780600319360112606c57546040516001600160a01b039091168152602090f35b80fd5b5034606c5780600319360112606c576002546040516001600160a01b039091168152602090f35b5034606c5780600319360112606c576001546040516001600160a01b039091168152602090f35b90503460e0578160031936011260e057676765c793fa10079d601b1b8152602090f35b5080fdfea26469706673582212203f97462b225985b2d78c0cacd011a8a877edfe191940be6d8c7e63d6ded39b0964736f6c63430008190033",
+  "deployedBytecode": "0x6080806040526004361015601257600080fd5b600090813560e01c9081632e0f26251460bd5750806336b17e1314609657806361d027b314606f5763cc48b94714604857600080fd5b34606c5780600319360112606c57546040516001600160a01b039091168152602090f35b80fd5b5034606c5780600319360112606c576002546040516001600160a01b039091168152602090f35b5034606c5780600319360112606c576001546040516001600160a01b039091168152602090f35b90503460e0578160031936011260e057676765c793fa10079d601b1b8152602090f35b5080fdfea26469706673582212203f97462b225985b2d78c0cacd011a8a877edfe191940be6d8c7e63d6ded39b0964736f6c63430008190033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
